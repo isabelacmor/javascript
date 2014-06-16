@@ -67,3 +67,18 @@ body{
     font-size: 0px;
     color: white;
 }
+
+.footer{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;  
+    font-family: Comic Sans, Comic Sans MS, cursive;
+    font-size: 14px;
+    color: white;
+}
+
+.footer a{
+    color: white;
+}
