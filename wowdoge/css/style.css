@@ -60,7 +60,7 @@ body{
 #words p{
     font-family: Comic Sans, Comic Sans MS, cursive;
     font-weight: bold;
-    width: 100%;
+    width: 100vh;
     position: absolute;
     top: 0;
     left: 0;
