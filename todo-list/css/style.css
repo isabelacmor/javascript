@@ -1,0 +1,57 @@
+.task-list{
+    width: 23%;
+    float: left;
+    margin: 0 5px;
+    background-color: rgb(119,219,224);
+    border-radius: 4px;
+    padding-bottom: 10px;
+}
+
+.task-list input, .task-list textarea{
+    width: 90%;
+    margin: 5px 0px 0px 15px;
+}
+
+.task-list input{
+    height: 30px;
+}
+
+.todo-task{
+    border-radius: 4px;
+    background-color: white;
+    width: 80%;
+    margin: 5px;
+    padding: 5px;
+}
+
+.task-list input[type="button"]{
+    width: 90%;
+    margin: 10px 0px 0px 15px;
+}
+
+.todo-task > .task-header{
+    font-weight: bold;
+}
+
+.todo-task > .task-date{
+    font-size: small;
+    font-style: italic;
+}
+
+.todo-task > .task-description{
+    font-size: smaller;
+}
+
+h3{
+    text-align: center;
+}
+
+#delete-container{
+    background-color: rgb(177,239,242);
+    border: 2px dotted grey;
+    width: 90%;
+    margin: 10px 0px 0px 15px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+}
