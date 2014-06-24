@@ -1,18 +1,35 @@
 <html>
 <head>
     <title>To do list</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
     <div class="task-list" id="pending">
+        <h3>Pending</h3>
     </div>
     
     <div class="task-list" id="completed">
+        <h3>Completed</h3>
     </div>
     
     <div class="task-list" id="inProgress">
+        <h3>In Progress</h3>
     </div>
     
     <div class="task-list">
+        <h3>Add task</h3>
+        
+        <form id="todo-form">
+            <input type="text" placeholder="title" />
+            <textarea placeholder="description"></textarea>
+            <input type="text" placeholder="due date" />
+            <input type="button" class="button button-primary" value="Add Task" />
+            
+            <input type="button" class="button button-primary" value="Clear Task" />
+            <div id="delete-container">
+                Drag here to delete task
+            </div>
+        </form>
     </div>
 </body>
 </html>
