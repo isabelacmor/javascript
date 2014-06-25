@@ -26,6 +26,7 @@ body, .well{
     margin: 0 auto;
     padding: 5px;
     border-bottom: 1px solid grey;
+    cursor: default;
 }
 
 #todo-form{

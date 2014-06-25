@@ -17,7 +17,7 @@ data = data || {};
 
 (function(todo, data, $) {
 
-    var defaults = {
+    var cnst = {
             todoTask: "todo-task",
             todoHeader: "task-header",
             todoDate: "task-date",
@@ -35,7 +35,7 @@ data = data || {};
     todo.init = function (options) {
 
         options = options || {};
-        options = $.extend({}, defaults, options);
+        options = $.extend({}, cnst, options);
 
         $.each(data, function (index, params) {
             generateElement(params);
@@ -80,7 +80,7 @@ data = data || {};
                             localStorage.setItem("todoData", JSON.stringify(data));
 
                             // Hiding Delete Area
-                            $("#" + defaults.deleteDiv).hide();
+                            $("#" + cnst.deleteDiv).hide();
                     }
             });
         });
@@ -101,7 +101,7 @@ data = data || {};
                 localStorage.setItem("todoData", JSON.stringify(data));
 
                 // Hiding Delete Area
-                $("#" + defaults.deleteDiv).hide();
+                $("#" + cnst.deleteDiv).hide();
             }
         })
 
@@ -117,32 +117,32 @@ data = data || {};
         }
 
         wrapper = $("<div />", {
-            "class" : defaults.todoTask,
-            "id" : defaults.taskId + params.id,
+            "class" : cnst.todoTask,
+            "id" : cnst.taskId + params.id,
             "data" : params.id
         }).appendTo(parent);
 
         $("<div />", {
-            "class" : defaults.todoHeader,
+            "class" : cnst.todoHeader,
             "text": params.title
         }).appendTo(wrapper);
 
         $("<div />", {
-            "class" : defaults.todoDate,
+            "class" : cnst.todoDate,
             "text": params.date
         }).appendTo(wrapper);
 
         $("<div />", {
-            "class" : defaults.todoDescription,
+            "class" : cnst.todoDescription,
             "text": params.description
         }).appendTo(wrapper);
 
 	    wrapper.draggable({
             start: function() {
-                $("#" + defaults.deleteDiv).show();
+                $("#" + cnst.deleteDiv).show();
             },
             stop: function() {
-                $("#" + defaults.deleteDiv).hide();
+                $("#" + cnst.deleteDiv).hide();
             },
 	        revert: "invalid",
 	        revertDuration : 200
@@ -152,11 +152,11 @@ data = data || {};
 
     // Remove task
     var removeElement = function (params) {
-        $("#" + defaults.taskId + params.id).remove();
+        $("#" + cnst.taskId + params.id).remove();
     };
 
     todo.add = function() {
-        var inputs = $("#" + defaults.formId + " :input"),
+        var inputs = $("#" + cnst.formId + " :input"),
             errorMessage = "Title can not be empty",
             id, title, description, date, tempData;
 
@@ -227,9 +227,13 @@ data = data || {};
     };
 
     todo.clear = function () {
-        data = {};
-        localStorage.setItem("todoData", JSON.stringify(data));
-        $("." + defaults.todoTask).remove();
+        
+        if(confirm("Are you sure you want to clear all data?")){
+            data = {};
+            localStorage.setItem("todoData", JSON.stringify(data));
+            $("." + cnst.todoTask).remove();
+        }
+        else{}
     };
 
 })(todo, data, jQuery);
