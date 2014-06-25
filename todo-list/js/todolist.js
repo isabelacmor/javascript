@@ -25,7 +25,7 @@ data = data || {};
             taskId: "task-",
             formId: "todo-form",
             dataAttribute: "data",
-            deleteDiv: "delete-div"
+            deleteDiv: "delete-container"
         }, codes = {
             "1" : "#pending",
             "2" : "#inProgress",
