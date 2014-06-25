@@ -1,3 +1,7 @@
+body{
+    background-color: rgb(194,245,245);
+}
+
 .task-list{
     width: 23%;
     float: left;
